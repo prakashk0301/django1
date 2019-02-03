@@ -11,10 +11,10 @@ node {
             message: "Started `${env.JOB_NAME}#${env.BUILD_NUMBER}`\n\n_The changes:_\n${lastChanges}"
 
         stage 'Test'
-            sh 'virtualenv env -p python2.7'
+            sh 'virtualenv env -p python3.7'
             sh '. env/bin/activate'
             sh 'env/bin/pip install -r requirements.txt'
-            sh 'env/bin/python2.7 manage.py'
+            sh 'env/bin/python3.7 manage.py'
 
         stage 'Deploy'
             sh './deployment/deploy_prod.sh'
