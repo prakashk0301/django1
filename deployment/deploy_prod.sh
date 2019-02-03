@@ -1,7 +1,7 @@
 #!/bin/sh
 
-ssh root@18.184.123.248 <<EOF
-  cd djtrump
+ssh root@18.185.73.165 <<EOF
+  cd project1
   git pull
   source /opt/envs/djtrump/bin/activate
   pip install -r requirements.txt
