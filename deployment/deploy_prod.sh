@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh root@18.194.22.139 <<EOF
+ssh root@18.194.22.139
   cd project1
   git pull
   source /opt/envs/project1/bin/activate
@@ -11,5 +11,4 @@ ssh root@18.194.22.139 <<EOF
   service httpd enable
   #./manage.py migrate
   sudo supervisorctl restart djtrump
-  exit
-EOF
+ 
