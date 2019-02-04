@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh ec2-user@18.194.22.139
+ssh ec2-user@18.194.22.139 <<EOF
   cd project1
   git pull
   source /opt/envs/project1/bin/activate
@@ -11,4 +11,5 @@ ssh ec2-user@18.194.22.139
   service httpd enable
   #./manage.py migrate
   sudo supervisorctl restart djtrump
- 
+  exit
+EOF
