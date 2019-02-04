@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh root@18.185.73.165 <<EOF
+ssh root@18.197.33.139 <<EOF
   cd project1
   git pull
   source /opt/envs/project1/bin/activate
