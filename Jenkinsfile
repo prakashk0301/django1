@@ -25,7 +25,7 @@ node {
             sh 'source /opt/envs/project1/bin/activate'
             sh 'pip install -r requirements.txt'
             sh '#./manage.py migrate'
-            sh 'sudo supervisorctl restart project1,
+            sh 'sudo supervisorctl restart project1'
             sh 'exit'
 //                EOF
         
