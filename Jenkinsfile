@@ -19,7 +19,7 @@ node {
 
         stage 'Deploy'
             sh 'chmod +x deployment/deploy_prod.sh'
-            sh 'ssh -TR root@52.59.204.113'
+            sh 'ssh root@52.59.204.113 -yes'
             sh 'cd project1'
             sh 'git pull'
             sh 'source /opt/envs/project1/bin/activate'
