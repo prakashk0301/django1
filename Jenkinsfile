@@ -22,12 +22,12 @@ node {
             sh 'ssh ec2-user@52.59.204.113'
             sh 'cd project1'
             sh 'git pull'
-                source /opt/envs/project1/bin/activate
-                pip install -r requirements.txt
-                #./manage.py migrate
-                sudo supervisorctl restart project1
-                exit
-                EOF
+            sh 'source /opt/envs/project1/bin/activate'
+            sh 'pip install -r requirements.txt'
+            sh '#./manage.py migrate'
+            sh 'sudo supervisorctl restart project1,
+            sh 'exit'
+//                EOF
         
  //           sh './deployment/deploy_prod.sh'
 
