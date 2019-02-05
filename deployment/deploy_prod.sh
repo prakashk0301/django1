@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh ec2-user@35.159.19.101 <<EOF
+ssh ec2-user@52.59.204.113 <<EOF
   cd project1
   git pull
   source /opt/envs/project1/bin/activate
