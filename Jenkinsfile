@@ -4,6 +4,7 @@ node {
 
     try {
         stage 'Checkout'
+        //some block
             checkout scm
 
             sh 'git log HEAD^..HEAD --pretty="%h %an - %s" > GIT_CHANGES'
