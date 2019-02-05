@@ -13,9 +13,9 @@ node {
         stage 'Test'
             sh 'virtualenv env -p python3.7'
             sh '. env/bin/activate'
-            sh 'env/bin/pip install -r requirements.txt'
-            sh 'env/bin/python3.7 manage.py'
-            sh 'python manage.py runserver 0.0.0.0:8000'
+            sh 'env/bin/pip install -r requirements.txt '
+            sh 'env/bin/python3.7 manage.py runserver 0.0.0.0:8000'
+//            sh 'python manage.py runserver 0.0.0.0:8000
 
         stage 'Deploy'
             sh 'chmod +x deployment/deploy_prod.sh'
