@@ -18,17 +18,7 @@ node {
 //            sh 'python manage.py runserver 0.0.0.0:8000
 
         stage 'Deploy'
-            sh 'chmod +x deployment/deploy_prod.sh'
-            sh 'ssh -T jenkins@18.184.1.78'
-            sh 'cd project1'
-            sh 'git pull'
-            sh 'source /opt/envs/project1/bin/activate'
-            sh 'pip install -r requirements.txt'
-            sh '#./manage.py migrate'
-            sh 'sudo supervisorctl restart project1'
-            sh 'exit'
-//                EOF
-        
+            sh 'chmod +x deployment/deploy_prod.sh'     
  //           sh './deployment/deploy_prod.sh'
 
 //        stage 'Publish results'
