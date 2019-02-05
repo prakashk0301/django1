@@ -19,16 +19,16 @@ node {
 
         stage 'Deploy'
             sh 'chmod +x deployment/deploy_prod.sh'
-            sh 'ssh ec2-user@52.59.204.113 
-        <<EOF
-  cd project1
-  git pull
-  source /opt/envs/project1/bin/activate
-  pip install -r requirements.txt
-  #./manage.py migrate
-  sudo supervisorctl restart project1
-        exit
-EOF
+            sh 'ssh ec2-user@52.59.204.113'
+            sh '<<EOF
+                cd project1
+                git pull
+                source /opt/envs/project1/bin/activate
+                pip install -r requirements.txt
+                #./manage.py migrate
+                sudo supervisorctl restart project1
+                exit
+                EOF
         
  //           sh './deployment/deploy_prod.sh'
 
