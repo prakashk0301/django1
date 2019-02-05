@@ -20,9 +20,8 @@ node {
         stage 'Deploy'
             sh 'chmod +x deployment/deploy_prod.sh'
             sh 'ssh ec2-user@52.59.204.113'
-            sh '<<EOF
-                cd project1
-                git pull
+            sh 'cd project1'
+            sh 'git pull'
                 source /opt/envs/project1/bin/activate
                 pip install -r requirements.txt
                 #./manage.py migrate
