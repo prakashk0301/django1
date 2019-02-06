@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh -o StrictHostKeyChecking=no -T -p Mintu@123 jenkins@3.120.141.30 <<EOF
+ssh -o StrictHostKeyChecking=no -T root@3.120.141.30 <<EOF
   cd project1
   git pull
   source /opt/envs/project1/bin/activate
