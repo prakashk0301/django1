@@ -20,8 +20,8 @@ node {
 
         stage 'Deploy'
 	    sh 'ssh -o StrictHostKeyChecking=no ec2-user@54.93.67.232'
-            sh 'chmod a+x deployment/deploy_prod.sh'     
-            sh './deployment/deploy_prod.sh'
+//            sh 'chmod a+x deployment/deploy_prod.sh'     
+//            sh './deployment/deploy_prod.sh'
 
 //        stage 'Publish results'
 //            slackSend color: "good", message: "Build successful: `${env.JOB_NAME}#${env.BUILD_NUMBER}` <${env.BUILD_URL}|Open in Jenkins>"
