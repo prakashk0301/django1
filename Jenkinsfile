@@ -20,7 +20,8 @@ node {
 
         stage 'Deploy'
 	    sh 'chmod a+x deployment/DevOps-key.pem'
-	    sh 'ssh -o StrictHostKeyChecking=no -tt -i /home/ec2-user/.ssh/DevOps-key.pem ec2-user@54.93.67.232'
+	    sh 'ssh -o StrictHostKeyChecking=no -tt ec2-user@54.93.67.232'
+//	    sh 'ssh -o StrictHostKeyChecking=no -tt -i /home/ec2-user/.ssh/DevOps-key.pem ec2-user@54.93.67.232'
 //	     sh 'ssh -o StrictHostKeyChecking=no IdentityFile /.ssh/DevOps.pem ec2-user@54.93.67.232'    
 //	    sh 'ssh -o StrictHostKeyChecking=no ec2-user@54.93.67.232'
 //            sh 'chmod a+x deployment/deploy_prod.sh'     
