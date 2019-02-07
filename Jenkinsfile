@@ -14,12 +14,12 @@ node {
             sh 'virtualenv env -p python3.7'
             sh '. env/bin/activate'
             sh 'env/bin/pip install -r requirements.txt '
-            sh 'env/bin/python3.7 manage.py runserver 35.159.11.180:8000'
+            sh 'env/bin/python3.7 manage.py'
 //            sh 'python manage.py runserver 0.0.0.0:8000
 
         stage 'Deploy'
             sh 'chmod +x deployment/deploy_prod.sh'
- //           sh './deployment/deploy_prod.sh'
+            sh './deployment/deploy_prod.sh'
 
 //        stage 'Publish results'
 //            slackSend color: "good", message: "Build successful: `${env.JOB_NAME}#${env.BUILD_NUMBER}` <${env.BUILD_URL}|Open in Jenkins>"
