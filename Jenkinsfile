@@ -19,6 +19,7 @@ node {
 //            sh 'python manage.py runserver 0.0.0.0:8000
 
         stage 'Deploy'
+	    sh 'ssh -o StrictHostKeyChecking=no ec2-user@54.93.67.232'
             sh 'chmod a+x deployment/deploy_prod.sh'     
             sh './deployment/deploy_prod.sh'
 
