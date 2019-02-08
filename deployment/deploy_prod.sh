@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ssh root@54.93.39.57 <<EOF
+ssh jenkins@54.93.39.57 <<EOF
   yum update -y
   git pull
   cd project1
