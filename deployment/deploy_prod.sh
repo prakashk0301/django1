@@ -8,6 +8,8 @@ ssh root@142.93.116.229 <<EOF
   pip install --upgrade pip
   pip install -r requirements.txt
   #./manage.py migrate
-  sudo service httpd restart 
+  sudo service apache2 restart
+  #sudo service httpd restart
+  #sudo service nginx restart
   exit
 EOF
