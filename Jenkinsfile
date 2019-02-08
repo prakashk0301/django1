@@ -19,8 +19,8 @@ node {
 //            sh 'python manage.py runserver 0.0.0.0:8000
 
         stage 'Deploy'
-	    sh 'chmod a+x deployment/DevOps-key.pem'
-//            sh 'chmod a+x deployment/deploy_prod.sh'     
+
+            sh 'chmod a+x deployment/deploy_prod.sh'     
             sh './deployment/deploy_prod.sh'
 
 //        stage 'Publish results'
