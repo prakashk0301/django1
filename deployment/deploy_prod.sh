@@ -1,7 +1,7 @@
 #!/bin/bash
 
-ssh jenkins@54.93.39.57 <<EOF
-  yum update -y
+ssh root@142.93.116.229 <<EOF
+  apt-get update -y
   git pull
   cd project1
   source /opt/envs/project1/bin/activate
