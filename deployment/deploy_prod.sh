@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh -o StrictHostKeyChecking=no ec2-user@54.93.67.232 <<EOF
+ssh root@142.93.116.229 <<EOF
   cd project1
   git pull
   source /opt/envs/project1/bin/activate
