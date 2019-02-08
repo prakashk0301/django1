@@ -11,10 +11,10 @@ node {
             message: "Started `${env.JOB_NAME}#${env.BUILD_NUMBER}`\n\n_The changes:_\n${lastChanges}"
 
         stage 'Test'
-            sh 'virtualenv env -p python3.5'
+            sh 'virtualenv env -p python3.7'
             sh '. env/bin/activate'
             sh 'env/bin/pip install -r requirements.txt'
-	    sh 'env/bin/python3.5 manage.py test --testrunner=project1.tests.test_runners.NoDbTestRunner'
+	    sh 'env/bin/python3.7 manage.py test --testrunner=project1.tests.test_runners.NoDbTestRunner'
  //           sh 'env/bin/python3.7 manage.py'
 //            sh 'python manage.py runserver 0.0.0.0:8000
 
