@@ -1,4 +1,4 @@
-#!/bin/bashsh
+#!/bin/bash
 
 ssh root@142.93.116.229 <<EOF
   apt-get update -y
