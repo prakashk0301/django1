@@ -2,7 +2,9 @@
 
 ssh root@142.93.116.229 <<EOF
   apt-get update -y
+  #yum install update -y
   git pull
+  #git pull <url>
   cd project1
   source /opt/envs/project1/bin/activate
   pip install --upgrade pip
