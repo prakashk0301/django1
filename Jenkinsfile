@@ -20,12 +20,8 @@ node {
 
         stage 'Deploy'
 	    sh 'chmod a+x deployment/DevOps-key.pem'
-	    sh 'ssh -o StrictHostKeyChecking=no -tt ec2-user@54.93.67.232'
-//	    sh 'ssh -o StrictHostKeyChecking=no -tt -i /home/ec2-user/.ssh/DevOps-key.pem ec2-user@54.93.67.232'
-//	     sh 'ssh -o StrictHostKeyChecking=no IdentityFile /.ssh/DevOps.pem ec2-user@54.93.67.232'    
-//	    sh 'ssh -o StrictHostKeyChecking=no ec2-user@54.93.67.232'
 //            sh 'chmod a+x deployment/deploy_prod.sh'     
-//            sh './deployment/deploy_prod.sh'
+            sh './deployment/deploy_prod.sh'
 
 //        stage 'Publish results'
 //            slackSend color: "good", message: "Build successful: `${env.JOB_NAME}#${env.BUILD_NUMBER}` <${env.BUILD_URL}|Open in Jenkins>"
