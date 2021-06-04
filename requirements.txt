@@ -1,4 +1,4 @@
-Django==2.2.13
+Django==2.2.21
 requests==2.20.0
 gunicorn==19.7.0
 gunicorn==19.7.0
